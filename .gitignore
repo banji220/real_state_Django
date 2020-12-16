@@ -148,3 +148,7 @@ dmypy.json
 pyvenv.cfg
 pip-selfcheck.json
 
+# STATIC files
+/static
+# Media
+/media

@@ -123,5 +123,5 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 STATIC_URL = '/static/'
 STATICFILES_DIR = [
-    os.path.joing(BASE_DIR, "btre/static")
+    os.path.join(BASE_DIR, "btre/static")
 ]
