@@ -2,6 +2,7 @@ from django.db import models
 from django.db.models.deletion import DO_NOTHING
 from realtors.models import Realtor
 from datetime import datetime
+
 class Listing(models.Model):
     relator = models.ForeignKey(Realtor, on_delete=DO_NOTHING)
     title = models.CharField(max_length=200)
