@@ -1,8 +1,7 @@
 from django.db import models
 from datetime import datetime
 class Realtor(models.Model):
-    id = models.IntegerField(max_length=200)
-    name = models.IntegerField(max_length=200)
+    name = models.IntegerField()
     photo = models.ImageField(upload_to="photos/%Y/%m/%d")
     descriptions = models.TextField()
     email = models.EmailField(blank=False, max_length=50)
