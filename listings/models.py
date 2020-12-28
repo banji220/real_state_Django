@@ -4,7 +4,7 @@ from realtors.models import Realtor
 from datetime import datetime
 
 class Listing(models.Model):
-    relator = models.ForeignKey(Realtor, on_delete=DO_NOTHING)
+    rl = models.ForeignKey(Realtor, on_delete=DO_NOTHING)
     title = models.CharField(max_length=200)
     address = models.CharField(max_length=200)
     city = models.CharField(max_length=100)
