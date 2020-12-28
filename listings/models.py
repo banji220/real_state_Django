@@ -2,14 +2,14 @@ from django.db import models
 from django.db.models.deletion import DO_NOTHING
 from realtors.models import Realtor
 from datetime import datetime
-
+  
 class Listing(models.Model):
     realtor = models.ForeignKey(Realtor, on_delete=DO_NOTHING)
-    title = models.CharField(max_length=200)
-    address = models.CharField(max_length=200)
-    city = models.CharField(max_length=100)
+    title = models.CharField(max_length=250)
+    address = models.CharField(max_length=250)
+    city = models.CharField(max_length=250)
     state = models.CharField(max_length=100)
-    zipcode = models.CharField(max_length=20)
+    zipcode = models.CharField(max_length=50)
     description = models.TextField(blank=True)
     price = models.IntegerField()
     bedrooms = models.IntegerField()
