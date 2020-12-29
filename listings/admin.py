@@ -6,4 +6,5 @@ class AdminListing(admin.ModelAdmin):
     list_display_links = ("id", "title")
     list_filter = ("realtor", "price")
     
+    
 admin.site.register(Listing, AdminListing)
