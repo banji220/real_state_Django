@@ -90,8 +90,13 @@
 
     <div class="row">
       <div class="col-md-12">
-      
-      </nav>
+        {% if is_paginated %}
+          <nav aria-label="Listing navigation"> 
+            {% if page_listing%}
+
+            {% endif %}
+          </nav>
+        {% endif %}
       </div>
     </div>
   </div>
