@@ -7,7 +7,7 @@ def listings(request):
     listings = Listing.objects.all()
     paginator = Paginator(listings, 3)
     page_number = request.GET.get("page")
-    page_listing = paginator.get_page("page_number")
+    page_listing = paginator.get_page(page_number)
     context = {
         "listings": page_listing
     }
