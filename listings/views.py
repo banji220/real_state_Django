@@ -4,7 +4,7 @@ from .models import Listing
 
 
 def listings(request):
-    page_listings = Listing.objects.all()
+    page_listings = Listing.objects.order_by("-list_date").filter(is_published=True)
     paginator = Paginator(page_listings, 6)
     page_number = request.GET.get("page")
     listings = paginator.get_page(page_number)
