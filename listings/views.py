@@ -5,7 +5,7 @@ from .models import Listing
 
 def listings(request):
     page_listings = Listing.objects.all()
-    paginator = Paginator(page_listings, 1)
+    paginator = Paginator(page_listings, 6)
     page_number = request.GET.get("page")
     listings = paginator.get_page(page_number)
     context = {
