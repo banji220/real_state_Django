@@ -4,12 +4,12 @@ from .models import Listing
 
 
 def listings(request):
-    listings = Listing.objects.all()
-    paginator = Paginator(listings, 3)
+    page_listings = Listing.objects.all()
+    paginator = Paginator(page_listings, 1)
     page_number = request.GET.get("page")
-    page_listing = paginator.get_page(page_number)
+    listings = paginator.get_page(page_number)
     context = {
-        "listings": page_listing
+        "listings": listings
     }
     
     
