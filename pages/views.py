@@ -2,11 +2,11 @@ from django.shortcuts import render
 from listings.models import Listing
 
 def home(request):
-    listings = Listing.order_by("list_date").filter(is_published=True)[:3]
+    listings = Listing.objects.order_by("list_date").filter(is_published=True)[:3]
     context = {
         "listings": listings,
     }
-    
     return render(request, "pages/home.html", context)
+
 def about(request):
     return render(request, "pages/about.html")
