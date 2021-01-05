@@ -1,7 +1,8 @@
 from django.shortcuts import render
-from  listings.views import listings
+from listings.models import Listing
 
 def home(request):
-    return render(request, "pages/home.html", listings)
+    
+    return render(request, "pages/home.html")
 def about(request):
     return render(request, "pages/about.html")
