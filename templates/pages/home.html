@@ -151,7 +151,7 @@
   <div class="container">
     <h3 class="text-center mb-3">Latest Listings</h3>
     <div class="row">
-      <!-- Listing 1 -->
+      <!-- 3 Listing Object -->
       {% if listings %} 
         {% for listing in listings %}
 
@@ -169,8 +169,7 @@
               <div class="listing-heading text-center">
                 <h4 class="text-primary">{{ listing.title }}</h4>
                 <p>
-                  <i class="fas fa-map-marker text-secondary"></i> {{ listing.city
-                  }} {{ listing.state }} {{ listing.zipcode }}
+                  <i class="fas fa-map-marker text-secondary"></i> {{ listing.city}} {{ listing.state }} {{ listing.zipcode }}
                 </p>
               </div>
               <hr />
@@ -208,7 +207,7 @@
             </div>
           </div>
         </div>
-        <!-- Listing 1 -->
+        <!-- 3 Listing Object -->
 
         {% endfor %} 
       {% endif %}
