@@ -9,8 +9,12 @@ def home(request):
     return render(request, "pages/home.html", context)
 
 def about(request):
-    realtors = Realtor.objects.order_by("hire_date")
+    # Get All Realtor
+    realtors = Realtor.objects.order_by("-hire_date")
+    # Get MVP Realtor
     mvp_realtor = Realtor.objects.filter(is_mvp=True)
+    
+    
     context = {
         "realtors": realtors,
         "mvp_realtor": mvp_realtor
