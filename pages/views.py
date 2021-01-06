@@ -9,4 +9,8 @@ def home(request):
     return render(request, "pages/home.html", context)
 
 def about(request):
-    return render(request, "pages/about.html")
+    realtors = Realtor.objects.all().filter(is_mvp=True)
+    context = {
+        "realtors": realtors,
+    }
+    return render(request, "pages/about.html", context)
