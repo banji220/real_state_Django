@@ -48,32 +48,28 @@
         </p>
       </div>
 
-      {% if realtors %}
-        {% for realtor in realtors %}
-          {% if realtor.is_mvp == True %}
-            <div class="col-md-4">
-              <div class="card">
-                <img
-                  class="card-img-top"
-                  src="{{ realtor.photo.url }}"
-                  alt="Seller of the month"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">Seller Of The Month</h5>
-                  <p class="text-success">
-                    <i class="text-success fas fa-award">{{ realtor.name }}</i>
-                  </p>
-                  <p class="card-text">{{ realtor.description }}</p>
-                </div>
-              </div>
+      <div class="col-md-4">
+
+      {% if mvp_realtor %}
+        {% for realtor in mvp_realtor %}
+          <div class="card">
+            <img
+              class="card-img-top"
+              src="{{ realtor.photo.url }}"
+              alt="Seller of the month"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Seller Of The Month</h5>
+              <p class="text-success">
+                <i class="text-success fas fa-award">{{ realtor.name }}</i>
+              </p>
+              <p class="card-text">{{ realtor.descriptions }}</p>
             </div>
-          {% endif %}
-        {% endfor %}
-      {% else %}
-        <div class="col-md-12">
-          <p> No Realtors Available </p>
+          </div>
         </div>
-      {% endif %}
+      {% endfor %}
+    {% endif %}
+
       
 
 
