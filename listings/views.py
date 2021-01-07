@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .models import Listing
-
+from realtors.models import Realtor
 
 def listings(request):
     page_listings = Listing.objects.order_by("-list_date").filter(is_published=True)
@@ -24,6 +24,7 @@ def listings(request):
     return render(request, "listings/listings.html", context)
 
 def listing(request, listing_id):
+    
     return render(request, "listings/listing.html")
 
 def search(request):
