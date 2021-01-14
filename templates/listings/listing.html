@@ -18,10 +18,10 @@
     <nav>
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
-          <a href="index.html">Home</a>
+          <a href="{% url "home" %}">Home</a>
         </li>
         <li class="breadcrumb-item">
-          <a href="listings.html">Listings</a>
+          <a href="{% url 'listings' %}">Listings</a>
         </li>
         <li class="breadcrumb-item active">{{ listing.title }}</li>
       </ol>
@@ -32,12 +32,12 @@
 <!-- Listing -->
 <section id="listing" class="py-4">
   <div class="container">
-    <a href="listings.html" class="btn btn-light mb-4">Back To Listings</a>
+    <a href=" {% url 'listings' %} " class="btn btn-light mb-4">Back To Listings</a>
     <div class="row">
       <div class="col-md-9">
         <!-- Home Main Image -->
         <img
-          src="assets/img/homes/home-1.jpg"
+          src="{{ listing.photo_main.url }}"
           alt=""
           class="img-main img-fluid mb-3"
         />
