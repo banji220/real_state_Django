@@ -1,6 +1,6 @@
 from django.shortcuts import get_object_or_404, render
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-from .choices import bedroom_choices, price_choices, state_choices
+from listings.choices import bedroom_choices, price_choices, state_choices
 from .models import Listing
 from realtors.models import Realtor
 
@@ -19,9 +19,7 @@ def listings(request):
         
     context = {
         "listings": listings,
-        "bedroom_choices": bedroom_choices,
-        "price_choices": price_choices,
-        "state_choices": state_choices,
+        
     }
     
     
