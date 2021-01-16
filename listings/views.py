@@ -1,6 +1,5 @@
 from django.shortcuts import get_object_or_404, render
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-from listings.choices import bedroom_choices, price_choices, state_choices
 from .models import Listing
 from realtors.models import Realtor
 
