@@ -18,7 +18,10 @@ def listings(request):
         listings = paginator.page(paginator.num_pages)
         
     context = {
-        "listings": listings
+        "listings": listings,
+        "bedroom_choices": bedroom_choices,
+        "price_choices": price_choices,
+        "state_choices": state_choices,
     }
     
     
