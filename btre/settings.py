@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
     'listings.apps.ListingsConfig',
     'realtors.apps.RealtorsConfig',
+    'accounts.apps.AccountsConfig',
     'pages.apps.PagesConfig',
     'django.contrib.admin',
     'django.contrib.auth',
